@@ -50,25 +50,25 @@ const path = require('path');
             }
 
         });
-        ejs.renderFile(path.join(__dirname,'views','mailTemplates','signupMailToAdmin.ejs'), {email:email}, function (err, data) {
-            if (err) {
-                console.log(err);
-            } else {
-                var mailOptions = {
-                    from: '"Signup link generation  " <bitsindri.saurav@gmail.com>', // sender address
-                    to: 'sauravkumar329@gmail.com', // list of receivers
-                    subject: 'Registration intiated by '+email, // Subject line
-                    text: 'Hello world?', // plain text body
-                    html: data
-                };
-                transporter.sendMail(mailOptions, (error, info) => {
-                    if (error) {
-                        return console.log(error);
-                    }
-                });
-            }
+        // ejs.renderFile(path.join(__dirname,'views','mailTemplates','signupEmail.ejs'), {email:email}, function (err, data) {
+        //     if (err) {
+        //         console.log(err);
+        //     } else {
+        //         var mailOptions = {
+        //             from: '"Signup link generation  " <bitsindri.saurav@gmail.com>', // sender address
+        //             to: 'sauravkumar329@gmail.com', // list of receivers
+        //             subject: 'Registration intiated by '+email, // Subject line
+        //             text: 'Hello world?', // plain text body
+        //             html: data
+        //         };
+        //         transporter.sendMail(mailOptions, (error, info) => {
+        //             if (error) {
+        //                 return console.log(error);
+        //             }
+        //         });
+        //     }
 
-        });
+        // });
 
     }
 };

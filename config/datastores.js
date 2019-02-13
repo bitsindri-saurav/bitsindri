@@ -32,7 +32,14 @@ module.exports.datastores = {
   *                                                                          *
   ***************************************************************************/
 
-  default: {
+
+  default: { 
+    // adapter: 'sails-mysql',
+    // host: 'sql12.freemysqlhosting.net',
+    // user: 'sql12278639', //optional
+    // password: 'V544wICuA1', //optional
+    // database: 'sql12278639' //optional
+   
 
     /***************************************************************************
     *                                                                          *

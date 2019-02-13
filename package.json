@@ -8,14 +8,19 @@
     "@sailshq/connect-redis": "^3.2.1",
     "@sailshq/lodash": "^3.10.3",
     "@sailshq/socket.io-redis": "^5.2.0",
+    "bcryptjs": "^2.4.3",
+    "crypto": "^1.0.1",
     "grunt": "1.0.1",
     "moment-timezone": "^0.5.23",
+    "monk": "^6.0.6",
     "nodemailer": "^5.1.1",
     "sails": "^1.1.0",
     "sails-hook-grunt": "^3.1.0",
     "sails-hook-orm": "^2.1.1",
     "sails-hook-sockets": "^1.5.5",
-    "sha256": "^0.2.0"
+    "sails-mysql": "^1.0.1",
+    "sha256": "^0.2.0",
+    "validate.js": "^0.12.0"
   },
   "devDependencies": {
     "@sailshq/eslint": "^4.19.3"
@@ -33,4 +38,7 @@
   },
   "author": "anonymous node/sails user",
   "license": "",
-  "engines": 
+  "engines": {
+    "node": "^8.14"
+  }
+}
