@@ -18,5 +18,9 @@ module.exports.policies = {
   ***************************************************************************/
 
   // '*': true,
+  IndexController: {
+
+    success : ['sessionAuth']
+} 
 
 };

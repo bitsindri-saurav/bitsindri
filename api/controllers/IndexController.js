@@ -1,4 +1,5 @@
 const sha256 = require('sha256');
+const passport = require('passport');
 const async = require('async');
 const moment = require('moment-timezone');
 const validator = require('validator');
@@ -61,4 +62,46 @@ sendEmailToUser: (req, res) => {
     });
     
 },
+newUser: (req, res) => {
+    console.log(req.params.session);
+    NewUser.find({sessionId: req.params.session}).then((doc) => {
+        // console.log('new user docs=========>',doc[0]);
+        if(doc.length == 0) {
+            res.render('pages/signup',);
+        }else {
+            User.find({email:doc[0].email}).then((user)=>{
+                console.log("newuser====>",user);
+                if(user.length==0){
+                    res.render('pages/signup', {email: doc[0].email});
+                }else{
+                    res.redirect('/login');
+                }
+            })
+            
+        }
+    }).catch((err) => {
+        console.log(err);
+    });
+},
+login: function(req, res) {
+    // req.session.authenticated=true;
+    // req.se
+      console.log(req.session.passport);
+      passport.authenticate('local', function(err, user, info){
+        // console.log(user);
+        if((err) || (!user)) {
+          return res.send({
+            message: info.message,
+            user
+          });
+        }
+  req.logIn(user, function(err) {
+          if(err) res.send(err);
+          return res.send({
+            message: info.message,
+            user
+          });
+        });
+      })(req, res);
+    },
 }

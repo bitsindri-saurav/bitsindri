@@ -19,8 +19,11 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'layouts/home' },
+  '/': { view: 'pages/home' },
   'post /send-email' : 'IndexController.sendEmailToUser',
+  'get /usersignup/:session' : 'IndexController.newUser',
+  'get /login': { view: 'pages/login' },
+  'post /login': 'IndexController.login',
 
 
   /***************************************************************************
