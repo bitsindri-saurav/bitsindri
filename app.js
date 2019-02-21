@@ -14,7 +14,7 @@
  *   => `node debug app.js`
  *
  * The same command-line arguments and env vars are supported, e.g.:
- * `NODE_ENV=production node app.js --port=80 --verbose`
+ * `SET NODE_ENV=production node app.js --port=80 --verbose`
  *
  * For more information see:
  *   https://sailsjs.com/anatomy/app.js
