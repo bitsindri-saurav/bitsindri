@@ -73,6 +73,9 @@ module.exports = {
       // ssl: true,
 
     },
+    sockets: {onlyAllowOrigins:['https://boiling-journey-59583.herokuapp.com/']
+
+    }
 
   },
 
