@@ -16,6 +16,7 @@
     "moment-timezone": "^0.5.23",
     "monk": "^6.0.6",
     "nodemailer": "^5.1.1",
+    "nodemon": "^1.18.10",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sails": "^1.1.0",
@@ -30,7 +31,7 @@
     "@sailshq/eslint": "^4.19.3"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "nodemon",
     "test": "npm run lint && npm run custom-tests && echo 'Done.'",
     "lint": "eslint . --max-warnings=0 --report-unused-disable-directives && echo '✔  Your .js files look good.'",
     "custom-tests": "echo \"(No other custom tests yet.)\" && echo"
